@@ -143,6 +143,9 @@ allSquare.forEach(function(sq){
     sq.addEventListener("dragstart", dragstart);
     sq.addEventListener('dragover', dragover);
     sq.addEventListener('drop', dropDown);
+    sq.addEventListener("touchstart", touchStart, { passive: false });
+    sq.addEventListener("touchmove", touchMove, { passive: false });
+    sq.addEventListener("touchend", touchEnd, { passive: false });
 
     
 })
@@ -222,6 +225,38 @@ function dropDown(e){
        return;
     }
 
+}
+
+function touchStart(e) {
+    e.preventDefault();  // Prevents default behavior like scrolling
+    const touch = e.touches[0];  // Get the first touch point
+    startPosition = touch.target.parentNode.getAttribute('sq-id');
+    draggedPiece = touch.target;
+    draggedPieceLetter = draggedPiece.dataset.piece.slice(0, 1);
+}
+
+function touchMove(e) {
+    e.preventDefault();  // Prevents default behavior like scrolling
+    const touch = e.touches[0];  // Get the first touch point
+    const element = document.elementFromPoint(touch.clientX, touch.clientY);
+
+    if (element && element.classList.contains('piece')) {
+        capturedPiece = element;
+        endPosition = element.parentNode.getAttribute('sq-id');
+        isDragoverSqContains = element;
+    } else if (element) {
+        endPosition = element.getAttribute('sq-id');
+        isDragoverSqContains = element?.firstChild;
+    }
+}
+
+function touchEnd(e) {
+    const touch = e.changedTouches[0];  // Get the first changed touch point
+    const element = document.elementFromPoint(touch.clientX, touch.clientY);
+    
+    if (element) {
+        dropDown({ target: element });
+    }
 }
 
 
