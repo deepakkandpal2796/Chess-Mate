@@ -133,8 +133,8 @@ html{
 
 /* HomePage  */
 .homePage{
-    width: 100vw;
-    height: 100vh;
+    width: 80%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,16 +144,20 @@ html{
 
 .homePage-pic{
     padding: 4rem;
-}
-
-.home-img{
-    border: #a3a3a3 1rem solid;
+    flex: 2 1 40rem;
 }
 
 .homepage-btn{
-    width: 50%;
+    flex: 1 1 40rem;
     padding: 4rem;
 }
+
+.home-img{
+    border: #fff 1rem solid;
+    width: 100%;
+}
+
+
 .btn-container{
     display: flex;
     align-items: center;
@@ -162,7 +166,8 @@ html{
 }
 
 .symbol{
-    font-size: 4rem;
+    font-size: 3rem;
+    color: #ffffff;
 }
 .symbol > img{
     width: 7rem;
@@ -170,8 +175,9 @@ html{
 }
 
 .tagline{
-    font-size: 4rem;
-    margin: 4rem;
+    font-size: 2rem;
+    margin: 1rem;
+    color: #fff;
     text-align: center;
 }
 
@@ -180,15 +186,17 @@ html{
     /* display: flex; */
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    font-weight: 300;
-    padding: 2rem;
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
     margin: 2rem;
-    border-radius: 1rem;
-    background: #EBECD0;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    background: #739552;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
+
 
 .btn:hover{
     cursor: pointer;
@@ -203,8 +211,11 @@ html{
 }
 #timePlay{
     width: 15rem;
-    height: 5rem;
-    font-size: 2rem;
+    height: 3rem;
+    text-align: center;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
     background: #EBECD0; 
 }
 
@@ -233,15 +244,14 @@ html{
         font-size: 2rem;
     }
     .tagline{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .home-img{
-        width: 40rem;
-        height: 40rem;
+        width: 100%;
     }
     .btn{
-        font-size: 3rem;
-        padding: 2rem;
+        font-size: 2rem;
+        padding: 1rem 3rem;
         margin: 2rem;
     }
     
