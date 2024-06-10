@@ -15,7 +15,6 @@ html{
     flex-wrap: wrap;
 }
 
-
 #chessboard{
     max-width: 60rem;
     height: 60rem;
@@ -30,7 +29,6 @@ html{
     background: #3A3834;
     padding: 2rem;
 }
-
 
 #info-player{
     font-size: 3rem;
@@ -47,7 +45,6 @@ html{
 
 .piece{
     z-index: 10; 
-   
     /* as we are dropping the peice div in sq  */
 }
 
