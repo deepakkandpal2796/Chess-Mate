@@ -144,7 +144,6 @@ html{
 
 .homePage-pic{
     padding: 4rem;
-
 }
 
 .home-img{
@@ -158,7 +157,7 @@ html{
 .btn-container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
@@ -240,6 +239,19 @@ html{
         width: 40rem;
         height: 40rem;
     }
+    .btn{
+        font-size: 3rem;
+        padding: 2rem;
+        margin: 2rem;
+    }
+    
+    #timePlay{
+        width: 10rem;
+        height: 3rem;
+        font-size: 2rem;
+        background: #EBECD0; 
+    }
+
     #chessboard{
         max-width: 40rem;
         height: 40rem;
