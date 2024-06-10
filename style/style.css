@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.boardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+#chessboard{
+    max-width: 60rem;
+    height: 60rem;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#movesHistory{
+    width: 40rem;
+    height: 60rem;
+    background: #3A3834;
+    padding: 2rem;
+}
+
+
+#info-player{
+    font-size: 3rem;
+}
+
+.square{
+    width: 7.5rem;
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.piece{
+    z-index: 10; 
+   
+    /* as we are dropping the peice div in sq  */
+}
+
+.square svg{
+    position: relative;
+    z-index: -9; 
+}
+
+.square svg g{
+    position: relative;
+    z-index: -10; 
+}
+
+.square svg path{
+    position: relative;
+    z-index: -11;
+}
+
+.darksq{
+    background: #739552;
+}
+
+.lightsq{
+    background: #EBECD0;
+}
+
+.blackPiece {
+    fill: black;
+}
+
+.whitePiece{
+    fill: white;
+}
+
+
+.timers{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.clock{
+    font-size: 2rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #a3a3a3;;
+}
+
+.active-clock{
+    background: #ffffff;
+}
+
+.moves{
+    display: grid;
+    max-height: 100%;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+.move{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.download{
+    margin: 1rem 0rem;
+}
+
+.btn-download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* HomePage  */
+.homePage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #3A3834;
+}
+
+.homePage-pic{
+    padding: 4rem;
+
+}
+
+.home-img{
+    border: #a3a3a3 1rem solid;
+}
+
+.homepage-btn{
+    width: 50%;
+    padding: 4rem;
+}
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.symbol{
+    font-size: 4rem;
+}
+.symbol > img{
+    width: 7rem;
+    height: 7rem;
+}
+
+.tagline{
+    font-size: 4rem;
+    margin: 4rem;
+    text-align: center;
+}
+
+.btn{
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    background: #EBECD0;
+    text-decoration: none;
+    color: #000;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: translateY(-0.5rem);
+    transition: 0.1s ease-in;
+}
+
+.btn:active{
+    cursor: pointer;
+    transform: translateY(0.5rem);
+    transition: 0.1s ease-in;
+}
+#timePlay{
+    width: 15rem;
+    height: 5rem;
+    font-size: 2rem;
+    background: #EBECD0; 
+}
+
+#timePlay:hover{
+    cursor: pointer;
+    transform: translateY(-0.5rem);
+    transition: 0.1s ease-in;
+}
+
+#timePlay:active{
+    cursor: pointer;
+    transform: translateY(0.5rem);
+    transition: 0.1s ease-in;
+}
+
+.btn-playNow{
+    width: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+    .symbol > img{
+        width: 4rem;
+        height: 4rem;
+    }
+    .symbol{
+        font-size: 2rem;
+    }
+    .tagline{
+        font-size: 1.5rem;
+    }
+    .home-img{
+        width: 40rem;
+        height: 40rem;
+    }
+    #chessboard{
+        max-width: 40rem;
+        height: 40rem;
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #movesHistory{
+        width: 30rem;
+        height: 50rem;
+        background: #3A3834;
+    }
+    .square{
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    svg{
+        width: 30;
+        height: 30;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #chessboard{
+        max-width: 30rem;
+        height: 30rem;
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #movesHistory{
+        width: 30rem;
+        height: 50rem;
+        background: #3A3834;
+    }
+    .square{
+        width: 3.75rem;
+        height: 3.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

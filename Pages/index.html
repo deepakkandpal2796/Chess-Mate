@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.png">
+    <title>Chess Mate</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="boardContainer">
+        <div class="chessBoard-cointainer">
+            <div id="chessboard"></div>
+        </div>
+        <div id="movesHistory">
+            <div class="timers">
+                <div class="player-one-clock clock">
+                    <span class="min" id = "player-one-min">10</span>
+                    <span> : </span>
+                    <span class="sec" id = "player-one-sec">00</span>
+                </div>
+                <div class="player-two-clock clock">
+                    <span class="min" id = "player-two-min">10</span>
+                    <span> : </span>
+                    <span class="sec" id = "player-two-sec">00</span>
+                </div>
+            </div>
+            <div class="moves">
+                <!-- <p class="move">e4</p>
+                <p class="move">e5</p>
+                <p class="move">e5</p> -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- <p id="info-player">It's <span id="player"></span> go.</p>
+    <p id="info-display"></p> -->
+    
+    
+    <script src="../pieces/pieces.js"></script>
+    <script src="../app.js"></script>
+</body>
+</html>
